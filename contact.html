@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Junkyard DJ</title>
+  <meta name="description" content="Interactive DJ experiences in Stoke-on-Trent and Cheshire.">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">Junkyard <span>DJ</span></a>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="schools.html">Schools & Inclusive</a>
+      <a href="hire.html">Hire</a>
+      <a href="contact.html" class="btn btn-primary">Get a quote</a>
+    </nav>
+  </div>
+</header>
+
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs">Home / Contact</div>
+      <span class="badge">Quotes • availability • event enquiries</span>
+      <h1>Book Junkyard DJ or ask about hire</h1>
+      <p class="lead">Use the form below as a website-ready enquiry page. You can connect it to Formspree, Netlify Forms, your hosting panel or your own email script later.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container split">
+      <div class="card">
+        <h2>Send an enquiry</h2>
+        <form class="form" action="send-mail.php" method="post">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Your name">
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="your@email.com">
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" placeholder="07XXX XXX XXX">
+          </div>
+          <div>
+            <label for="event-type">Booking type</label>
+            <select id="event-type" name="event_type">
+              <option>Wedding</option>
+              <option>Party / private event</option>
+              <option>School visit</option>
+              <option>Summer fair / community event</option>
+              <option>Mixing desk hire</option>
+            </select>
+          </div>
+          <div>
+            <label for="date">Preferred date</label>
+            <input id="date" name="date" placeholder="DD/MM/YYYY">
+          </div>
+          <div>
+            <label for="location">Venue / location</label>
+            <input id="location" name="location" placeholder="Stoke-on-Trent, Cheshire, etc.">
+          </div>
+          <div>
+            <label for="message">Tell us what you need</label>
+            <textarea id="message" name="message" placeholder="Event type, guest numbers, timings, any accessibility requirements, and whether you want a full event booking or hire only."></textarea>
+          </div>
+          <div style="display:none;">
+  <label for="website">Leave this field empty</label>
+  <input id="website" name="website" type="text" autocomplete="off">
+</div>
+<button class="btn btn-primary" type="submit">Send enquiry</button>
+        </form>
+      </div>
+      <div class="card">
+        <h2>Contact details</h2>
+        <p><strong>Email:</strong> hello@junkyarddj.co.uk</p>
+        <p><strong>Phone:</strong> 07XXX XXX XXX</p>
+        <p><strong>Instagram:</strong> @junkyarddjuk</p>
+        <p><strong>Area served:</strong> Stoke-on-Trent, Cheshire and surrounding areas</p>
+        <hr style="border:none;border-top:1px solid var(--line);margin:20px 0">
+        <p class="small">These are placeholder contact details. Replace them with your real email, phone number and Instagram link before publishing.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="brand">Junkyard <span>DJ</span></div>
+      <p class="small">Interactive DJ experiences for weddings, parties, schools and community events across Stoke-on-Trent, Cheshire and surrounding areas.</p>
+      <p class="small"><strong>Instagram:</strong> @junkyarddjuk<br>
+      <strong>Email:</strong> hello@junkyarddj.co.uk<br>
+      <strong>Phone:</strong> 07XXX XXX XXX</p>
+    </div>
+    <div>
+      <p class="small"><strong>Pages</strong></p>
+      <p class="small">
+        <a href="events.html">Events & Parties</a><br>
+        <a href="schools.html">Schools & Inclusive Sessions</a><br>
+        <a href="hire.html">Hire the Mixing Desk</a><br>
+        <a href="contact.html">Contact</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
