@@ -17,12 +17,12 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $smtpHost = 'smtp.livemail.co.uk';
 $smtpPort = 587;          // Usually 587 for TLS, or 465 for SSL
 $smtpSecure = 'tls';      // 'tls' or 'ssl'
-$smtpUsername = 'YOUR_EMAIL@YOURDOMAIN.CO.UK';
-$smtpPassword = 'YOUR_PASSWORD';
+$smtpUsername = 'events@junkyarddj.com';
+$smtpPassword = '9.rsw1L\&pSCc<zxALXd';
 
-$fromEmail = 'YOUR_EMAIL@YOURDOMAIN.CO.UK';
+$fromEmail = 'events@junkyarddj.com';
 $fromName = 'Junkyard DJ Website';
-$toEmail = 'YOUR_EMAIL@YOURDOMAIN.CO.UK';
+$toEmail = 'events@junkyarddj.com';
 $toName = 'Junkyard DJ';
 /** ----------------------------------------------------------- */
 
