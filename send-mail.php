@@ -18,7 +18,24 @@ $smtpHost = 'smtp.livemail.co.uk';
 $smtpPort = 587;          // Usually 587 for TLS, or 465 for SSL
 $smtpSecure = 'tls';      // 'tls' or 'ssl'
 $smtpUsername = 'events@junkyarddj.com';
-$smtpPassword = '9.rsw1L\&pSCc<zxALXd';
+
+// The SMTP password is NOT stored in this repository. It lives in
+// mail-config.php on the server, which returns ['smtp_password' => '...'].
+// Put that file one folder above the website (preferred, so it can't be
+// requested from the web), or next to this file. See mail-config.example.php.
+$mailConfig = null;
+foreach ([dirname(__DIR__) . '/mail-config.php', __DIR__ . '/mail-config.php'] as $configPath) {
+    if (is_readable($configPath)) {
+        $mailConfig = require $configPath;
+        break;
+    }
+}
+if (!is_array($mailConfig) || empty($mailConfig['smtp_password'])) {
+    error_log('send-mail.php: mail-config.php missing or has no smtp_password');
+    http_response_code(500);
+    exit('Sorry, the contact form is temporarily unavailable. Please email events@junkyarddj.com.');
+}
+$smtpPassword = (string)$mailConfig['smtp_password'];
 
 $fromEmail = 'events@junkyarddj.com';
 $fromName = 'Junkyard DJ Website';
